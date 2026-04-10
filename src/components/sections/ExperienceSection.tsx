@@ -56,59 +56,58 @@ const experiences: ExperienceEntry[] = [
 
 export function ExperienceSection() {
   return (
-    <section
-      id="experience"
-      className="py-24 px-8 md:px-16 border-b border-ghost-100"
-    >
-      {/* Section header */}
-      <p className="text-xs tracking-[0.3em] uppercase text-gold mb-20">
-        // Manifesto 02. Experience
-      </p>
+    <section id="experience" className="py-24 border-b border-ghost-100">
+      <div className="max-w-7xl mx-auto w-full px-8">
+        {/* Section header */}
+        <p className="text-xs tracking-[0.3em] uppercase text-gold mb-20">
+          // Manifesto 02. Experience
+        </p>
 
-      {/* Experience entries */}
-      <div className="max-w-5xl mx-auto w-full flex flex-col gap-24">
-        {experiences.map((exp) => (
-          <div
-            key={exp.index}
-            className="grid md:grid-cols-[2fr_5fr] gap-8 items-start"
-          >
-            {/* Left: company info */}
-            <div className="flex flex-col gap-3">
-              <span className="text-[4rem] leading-none font-serif text-ghost-200 select-none">
-                {exp.index}
-              </span>
-              <Heading as="h3" className="font-serif text-foreground">
-                {exp.company}
-              </Heading>
-              <span className="text-xs tracking-widest uppercase text-gold">
-                {exp.period}
-              </span>
-            </div>
+        {/* Experience entries */}
+        <div className="flex flex-col gap-24">
+          {experiences.map((exp) => (
+            <div
+              key={exp.index}
+              className="grid md:grid-cols-[2fr_5fr] gap-8 items-start"
+            >
+              {/* Left: company info */}
+              <div className="flex flex-col gap-3">
+                <span className="text-[4rem] leading-none font-serif text-ghost-200 select-none">
+                  {exp.index}
+                </span>
+                <Heading as="h3" className="font-serif text-foreground">
+                  {exp.company}
+                </Heading>
+                <span className="text-xs tracking-widest uppercase text-gold">
+                  {exp.period}
+                </span>
+              </div>
 
-            {/* Right: role card */}
-            <div className="flex flex-col gap-5">
-              <Heading as="h3" className="font-serif text-foreground leading-snug">
-                {exp.role}
-              </Heading>
-              <span className="text-xs tracking-widest uppercase text-muted">
-                {exp.context}
-              </span>
-              <BodyText muted className="text-sm leading-relaxed">
-                {exp.description}
-              </BodyText>
-              <div className="flex flex-wrap gap-2 pt-2">
-                {exp.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="text-[10px] tracking-widest uppercase border border-gray-600 px-2 py-0.5 text-gray-300"
-                  >
-                    {tag}
-                  </span>
-                ))}
+              {/* Right: role details */}
+              <div className="flex flex-col gap-5">
+                <Heading as="h3" className="font-serif text-foreground leading-snug">
+                  {exp.role}
+                </Heading>
+                <span className="text-xs tracking-widest uppercase text-muted">
+                  {exp.context}
+                </span>
+                <BodyText muted className="text-sm leading-relaxed">
+                  {exp.description}
+                </BodyText>
+                <div className="flex flex-wrap gap-2 pt-2">
+                  {exp.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="text-[10px] tracking-widest uppercase border border-gray-600 px-2 py-0.5 text-gray-300"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );

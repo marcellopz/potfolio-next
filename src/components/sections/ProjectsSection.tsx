@@ -72,38 +72,35 @@ function ProjectText({ project }: { project: Project }) {
 
 export function ProjectsSection() {
   return (
-    <section
-      id="gallery"
-      className="py-24 px-8 md:px-16 border-b border-ghost-100"
-    >
-      {/* Header */}
-      <p className="text-xs tracking-[0.3em] uppercase text-gold mb-6">
-        Curated Artifacts .001
-      </p>
-      <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-4">
-        <h2 className="font-serif text-foreground text-[clamp(2.5rem,6vw,5rem)] leading-none tracking-tight">
-          Selected Works
-        </h2>
-        <div className="flex flex-col gap-1 md:text-right md:pb-2">
-          <span className="text-xs tracking-widest uppercase text-muted">
-            Loc: Vitória - ES - Brazil
-          </span>
-          <span className="text-xs tracking-widest uppercase text-muted">
-            Role: Front-End Developer
-          </span>
-          <span className="text-xs tracking-widest uppercase text-muted">
-            Spec: React / TS / Next.js
-          </span>
+    <section id="gallery" className="py-24 border-b border-ghost-100">
+      <div className="max-w-7xl mx-auto w-full px-8">
+        {/* Header */}
+        <p className="text-xs tracking-[0.3em] uppercase text-gold mb-6">
+          Curated Artifacts .001
+        </p>
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-4">
+          <h2 className="font-serif text-foreground text-[clamp(2.5rem,6vw,5rem)] leading-none tracking-tight">
+            Selected Works
+          </h2>
+          <div className="flex flex-col gap-1 md:text-right md:pb-2">
+            <span className="text-xs tracking-widest uppercase text-muted">
+              Loc: Vitória - ES - Brazil
+            </span>
+            <span className="text-xs tracking-widest uppercase text-muted">
+              Role: Front-End Developer
+            </span>
+            <span className="text-xs tracking-widest uppercase text-muted">
+              Spec: React / TS / Next.js
+            </span>
+          </div>
         </div>
-      </div>
 
-      <BodyText muted className="max-w-lg mb-20 text-sm leading-relaxed">
-        An editorial documentation of technical craft, balancing structured
-        backends with the fluid artistry of React frontends.
-      </BodyText>
+        <BodyText muted className="max-w-lg mb-20 text-sm leading-relaxed">
+          An editorial documentation of technical craft, balancing structured
+          backends with the fluid artistry of React frontends.
+        </BodyText>
 
-      {/* Z-pattern project list */}
-      <div className="max-w-5xl mx-auto w-full">
+        {/* Z-pattern project list */}
         <div className="flex flex-col divide-y divide-ghost-100">
           {projects.map((project, i) => {
             const imageLeft = i % 2 === 0;
@@ -127,51 +124,51 @@ export function ProjectsSection() {
             );
           })}
         </div>
-      </div>
 
-      {/* Philosophy block */}
-      <div className="grid md:grid-cols-2 gap-16 items-center mt-24 pt-16 border-t border-ghost-100">
-        <div className="flex flex-col gap-6">
-          <Heading as="h2" className="font-serif italic text-foreground leading-tight">
-            The Philosophy of Precision Craft.
-          </Heading>
-          <BodyText muted className="text-sm leading-relaxed">
-            Technical architecture is more than just functional execution; it is
-            the curation of logical systems into a cohesive narrative. Every
-            line of code, like every typographic choice, contributes to the
-            integrity of the whole.
-          </BodyText>
+        {/* Philosophy block */}
+        <div className="grid md:grid-cols-2 gap-16 items-center mt-24 pt-16 border-t border-ghost-100">
+          <div className="flex flex-col gap-6">
+            <Heading as="h2" className="font-serif italic text-foreground leading-tight">
+              The Philosophy of Precision Craft.
+            </Heading>
+            <BodyText muted className="text-sm leading-relaxed">
+              Technical architecture is more than just functional execution; it is
+              the curation of logical systems into a cohesive narrative. Every
+              line of code, like every typographic choice, contributes to the
+              integrity of the whole.
+            </BodyText>
 
-          <div className="border border-ghost-200 mt-4">
-            <div className="px-4 py-2 border-b border-ghost-200">
-              <span className="text-[10px] tracking-widest uppercase text-muted">
-                Archive Status
-              </span>
-            </div>
-            {[
-              { key: "Core Systems", value: "Stable" },
-              { key: "Experimental Labs", value: "Active" },
-              { key: "Version", value: "V.01-2026" },
-            ].map((row) => (
-              <div
-                key={row.key}
-                className="px-4 py-3 flex justify-between border-b border-ghost-100 last:border-0"
-              >
-                <span className="text-xs tracking-wide uppercase text-muted">
-                  {row.key}
-                </span>
-                <span className="text-xs tracking-widest uppercase text-foreground">
-                  {row.value}
+            <div className="border border-ghost-200 mt-4">
+              <div className="px-4 py-2 border-b border-ghost-200">
+                <span className="text-[10px] tracking-widest uppercase text-muted">
+                  Archive Status
                 </span>
               </div>
-            ))}
+              {[
+                { key: "Core Systems", value: "Stable" },
+                { key: "Experimental Labs", value: "Active" },
+                { key: "Version", value: "V.01-2026" },
+              ].map((row) => (
+                <div
+                  key={row.key}
+                  className="px-4 py-3 flex justify-between border-b border-ghost-100 last:border-0"
+                >
+                  <span className="text-xs tracking-wide uppercase text-muted">
+                    {row.key}
+                  </span>
+                  <span className="text-xs tracking-widest uppercase text-foreground">
+                    {row.value}
+                  </span>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
 
-        <div className="aspect-video border border-ghost-200 flex items-center justify-center">
-          <span className="font-serif italic text-muted/30 text-2xl text-center px-8">
-            Precision.<br />Craft.
-          </span>
+          <div className="aspect-video border border-ghost-200 flex items-center justify-center">
+            <span className="font-serif italic text-muted/30 text-2xl text-center px-8">
+              Precision.<br />Craft.
+            </span>
+          </div>
         </div>
       </div>
     </section>
