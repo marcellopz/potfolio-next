@@ -27,7 +27,7 @@ export function ContactSection() {
               <span className="text-[10px] tracking-widest uppercase text-muted">
                 Location
               </span>
-              <span className="text-sm text-foreground">São Paulo, BR — Remote</span>
+              <span className="text-sm text-foreground">Vitória, ES — Remote</span>
             </div>
             <div className="flex flex-col gap-1">
               <span className="text-[10px] tracking-widest uppercase text-muted">

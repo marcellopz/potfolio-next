@@ -5,9 +5,9 @@ import { Button } from "@/components/ui/Button";
 const expertiseStack = [
   "React & Next.js",
   "TypeScript",
-  "Tailwind CSS",
-  "UI Engineering",
-  "System Design",
+  "TanStack Query",
+  "tRPC",
+  "AWS Certified",
 ];
 
 export function AboutSection() {
@@ -42,16 +42,15 @@ export function AboutSection() {
           </Heading>
 
           <BodyText>
-            I&apos;m a{" "}
+            I&apos;m Marcello — a{" "}
             <span className="text-gold font-medium">
-              Mid-Level React Developer
+              Mid-Level Software Engineer
             </span>{" "}
-            with 4 years of experience specializing in building high-performance,
-            accessible web applications. Currently focused on{" "}
+            with 5 years of experience specializing in React, TypeScript, and Next.js. Proven track record delivering high-quality front-end features for complex internal platforms and large-scale{" "}
             <span className="text-gold font-medium">
-              creating meaningful user experiences
-            </span>{" "}
-            at the intersection of design and robust engineering.
+              design systems
+            </span>
+            . Leveraging an Electrical Engineering background to bring a disciplined, analytical approach to building performant and scalable user experiences.
           </BodyText>
 
           {/* Divider */}
@@ -67,7 +66,7 @@ export function AboutSection() {
             </p>
           </div>
 
-          <a href="#contact" className="mt-2">
+          <a href="#contact" className="mt-2 cursor-pointer">
             <Button variant="ghost">
               Let&apos;s Collaborate &rarr;
             </Button>

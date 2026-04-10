@@ -8,16 +8,16 @@ type TechGroup = {
 
 const techGroups: TechGroup[] = [
   {
-    label: "Core",
-    items: ["React.js", "TypeScript", "JavaScript ES6+", "Node.js"],
+    label: "Languages",
+    items: ["TypeScript", "JavaScript (ES6+)", "HTML5", "CSS3", "Python", "PHP (Basic)"],
   },
   {
-    label: "Styling & UI",
-    items: ["Tailwind CSS", "CSS3", "Material UI", "Styled Components"],
+    label: "Frameworks & Libraries",
+    items: ["React.js", "Next.js", "Redux", "Zustand", "TanStack Query", "tRPC", "RTL", "Jest", "Node.js", "Tailwind CSS", "Styled Components"],
   },
   {
-    label: "Tools & Infra",
-    items: ["Git", "Firebase", "AWS", "Vercel", "Figma"],
+    label: "Tools & Platforms",
+    items: ["Git", "GitLab", "AWS (Solutions Architect)", "Firebase", "Vercel", "Jira", "Figma"],
   },
 ];
 

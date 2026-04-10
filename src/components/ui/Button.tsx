@@ -12,7 +12,7 @@ export function Button({
   ...props
 }: ButtonProps) {
   const base =
-    "inline-flex items-center justify-center px-8 py-3 text-sm tracking-widest uppercase font-sans font-medium transition-all disabled:opacity-50 disabled:cursor-not-allowed";
+    "inline-flex items-center justify-center px-8 py-3 text-sm tracking-widest uppercase font-sans font-medium transition-all cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed";
 
   const variants = {
     primary: `

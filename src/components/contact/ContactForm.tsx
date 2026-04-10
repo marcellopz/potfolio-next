@@ -33,28 +33,28 @@ export function ContactForm() {
   return (
     <form ref={formRef} onSubmit={handleSubmit} className="flex flex-col gap-8">
       <TextInput
-        label="Nome"
+        label="Name"
         name="from_name"
-        placeholder="Seu nome"
+        placeholder="Your name"
         required
         disabled={status === "sending"}
       />
       <TextInput
-        label="E-mail"
+        label="Email Address"
         name="reply_to"
         type="email"
-        placeholder="seu@email.com"
+        placeholder="your@email.com"
         required
         disabled={status === "sending"}
       />
       <div className="flex flex-col gap-1">
         <label className="text-xs tracking-widest uppercase text-muted">
-          Mensagem
+          Project Details
         </label>
         <textarea
           name="message"
           rows={5}
-          placeholder="Conte sobre o seu projeto..."
+          placeholder="Tell me about your project..."
           required
           disabled={status === "sending"}
           className="
@@ -67,17 +67,17 @@ export function ContactForm() {
 
       <div className="flex items-center gap-6">
         <Button type="submit" disabled={status === "sending"}>
-          {status === "sending" ? "Enviando..." : "Enviar mensagem"}
+          {status === "sending" ? "Sending..." : "Send Request"}
         </Button>
 
         {status === "sent" && (
           <span className="text-sm text-gold tracking-wide">
-            Mensagem enviada com sucesso.
+            Message sent successfully.
           </span>
         )}
         {status === "error" && (
           <span className="text-sm text-red-400 tracking-wide">
-            Algo deu errado. Tente novamente.
+            Something went wrong. Please try again.
           </span>
         )}
       </div>

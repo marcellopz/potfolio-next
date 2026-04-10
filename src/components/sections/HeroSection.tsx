@@ -29,7 +29,7 @@ export function HeroSection() {
           {[
             "Front-End Developer",
             "React & TypeScript",
-            "São Paulo, BR",
+            "Vitória - ES - Brazil",
             "Remote / Global",
           ].map((item) => (
             <span
@@ -54,10 +54,10 @@ export function HeroSection() {
 
         <div className="flex items-center gap-4">
           <a href="#gallery">
-            <Button variant="primary">Ver Projetos</Button>
+            <Button variant="ghost" className="border-gold text-gold hover:brightness-110">Explore Archive</Button>
           </a>
           <a href="#contact">
-            <Button variant="ghost">Falar comigo</Button>
+            <Button variant="ghost">Get in Touch</Button>
           </a>
         </div>
       </div>
