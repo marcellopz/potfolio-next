@@ -65,7 +65,7 @@ const projects: Project[] = [
 function FreelanceGraphic() {
   return (
     <div className="relative aspect-video bg-ghost-100 border border-ghost-200 flex items-center justify-center overflow-hidden">
-      {/* Geometric decoration — mirrors About section style */}
+      {/* Geometric decoration - mirrors About section style */}
       <div className="absolute w-[85%] h-[120%] border border-gold/10 rotate-18" />
       <div className="absolute w-[70%] h-[100%] border border-gold/15 rotate-[-7deg]" />
       <div className="absolute w-[40%] h-[70%] border border-gold/20 rotate-[10deg]" />

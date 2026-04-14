@@ -33,7 +33,7 @@ export function TechnologiesSection() {
             Technologies
           </Heading>
           <BodyText muted className="max-w-sm text-sm">
-            The instruments behind the craft — chosen for precision and
+            The instruments behind the craft, chosen for precision and
             scalability.
           </BodyText>
         </div>

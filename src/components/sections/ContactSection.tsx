@@ -20,7 +20,7 @@ export function ContactSection() {
             </Heading>
             <BodyText muted className="text-sm leading-relaxed max-w-sm">
               Interested in collaborating on a product, a design system, or a
-              challenging engineering problem? Reach out — I read every message.
+              challenging engineering problem? Reach out - I read every message.
             </BodyText>
 
             <div className="border-t border-ghost-100 pt-6 flex flex-col gap-3">
@@ -28,7 +28,7 @@ export function ContactSection() {
                 <span className="text-[10px] tracking-widest uppercase text-muted">
                   Location
                 </span>
-                <span className="text-sm text-foreground">Vitória, ES — Remote</span>
+                <span className="text-sm text-foreground">Vitória, ES - Remote</span>
               </div>
               <div className="flex flex-col gap-1">
                 <span className="text-[10px] tracking-widest uppercase text-muted">

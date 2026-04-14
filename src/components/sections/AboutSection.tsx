@@ -38,7 +38,7 @@ export function AboutSection() {
             </Heading>
 
             <BodyText>
-              I&apos;m Marcello — a{" "}
+              I&apos;m Marcello, a{" "}
               <span className="text-gold font-medium">
                 Mid-Level Software Engineer
               </span>{" "}

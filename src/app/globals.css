@@ -18,7 +18,7 @@
   --color-ghost-200: rgba(255, 255, 255, 0.12);
   --color-ghost-300: rgba(255, 255, 255, 0.20);
 
-  /* Raio zero — nada arredondado por padrão */
+  /* Zero radius - no rounding by default */
   --radius:     0px;
   --radius-sm:  0px;
   --radius-md:  0px;

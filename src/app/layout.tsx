@@ -3,7 +3,7 @@ import { newsreader, inter } from "./fonts";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Marcello — The Digital Archivist",
+  title: "Marcello: The Digital Archivist",
   description: "Portfolio of Marcello Pimentel Zanandrea, Front-End Developer specializing in React, TypeScript, and Next.js.",
   icons: {
     icon: "/logo.svg",
