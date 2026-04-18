@@ -9,11 +9,11 @@ type TechGroup = {
 const techGroups: TechGroup[] = [
   {
     label: "Languages",
-    items: ["TypeScript", "JavaScript (ES6+)", "HTML5", "CSS3", "Python", "PHP (Basic)"],
+    items: ["TypeScript", "JavaScript (ES6+)", "HTML5", "CSS3"],
   },
   {
     label: "Frameworks & Libraries",
-    items: ["React.js", "Next.js", "Redux", "Zustand", "TanStack Query", "tRPC", "RTL", "Node.js", "Tailwind CSS"],
+    items: ["React.js", "Next.js", "Redux", "TanStack Query", "tRPC", "Node.js", "Tailwind CSS"],
   },
   {
     label: "Tools & Platforms",
@@ -26,7 +26,7 @@ export function TechnologiesSection() {
     <section id="technologies" className="py-24 border-b border-ghost-100">
       <div className="max-w-screen-2xl mx-auto w-full px-8 md:px-12">
         <p className="text-xs tracking-[0.3em] uppercase text-gold mb-4">
-          // Stack
+          {"// Stack"}
         </p>
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <Heading as="h2" className="font-serif text-foreground">

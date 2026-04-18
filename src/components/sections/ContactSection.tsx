@@ -7,16 +7,16 @@ export function ContactSection() {
     <section id="contact" className="py-24">
       <div className="max-w-screen-2xl mx-auto w-full px-8 md:px-12">
         <p className="text-xs tracking-[0.3em] uppercase text-gold mb-4">
-          // Manifesto 03. Contact
+          {"// Manifesto 03. Contact"}
         </p>
 
         <div className="grid md:grid-cols-2 gap-16 items-start">
           {/* Left: copy */}
           <div className="flex flex-col gap-6">
             <Heading as="h2" className="font-serif text-foreground leading-tight">
-              Let&apos;s Build
+              Let&apos;s Make
               <br />
-              <span className="text-gold italic">Something Precise.</span>
+              <span className="text-gold italic">It Happen.</span>
             </Heading>
             <BodyText muted className="text-sm leading-relaxed max-w-sm">
               Interested in collaborating on a product, a design system, or a

@@ -10,23 +10,48 @@ type Status = "idle" | "sending" | "sent" | "error";
 export function ContactForm() {
   const formRef = useRef<HTMLFormElement>(null);
   const [status, setStatus] = useState<Status>("idle");
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     if (!formRef.current) return;
 
+    setErrorMessage(null);
     setStatus("sending");
+
+    const emailConfig = {
+      serviceId: process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+      templateId: process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+      publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY,
+    };
+
+    const missingConfig = Object.entries(emailConfig)
+      .filter(([, value]) => !value)
+      .map(([key]) => key);
+
+    if (missingConfig.length > 0) {
+      console.error("Missing EmailJS config:", missingConfig.join(", "));
+      setStatus("error");
+      setErrorMessage(
+        "Email service is not configured yet. Please reach out directly."
+      );
+      return;
+    }
+
     try {
       await emailjs.sendForm(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+        emailConfig.serviceId!,
+        emailConfig.templateId!,
         formRef.current,
-        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
+        emailConfig.publicKey!
       );
       setStatus("sent");
+      setErrorMessage(null);
       formRef.current.reset();
-    } catch {
+    } catch (error) {
+      console.error("EmailJS send failed:", error);
       setStatus("error");
+      setErrorMessage("Something went wrong. Please try again.");
     }
   }
 
@@ -77,7 +102,7 @@ export function ContactForm() {
         )}
         {status === "error" && (
           <span className="text-sm text-red-400 tracking-wide">
-            Something went wrong. Please try again.
+            {errorMessage ?? "Something went wrong. Please try again."}
           </span>
         )}
       </div>

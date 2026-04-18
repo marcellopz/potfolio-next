@@ -1,5 +1,6 @@
 import { Heading } from "@/components/ui/Heading";
 import { BodyText } from "@/components/ui/BodyText";
+import Image from "next/image";
 
 type ExperienceEntry = {
   index: string;
@@ -19,8 +20,8 @@ const experiences: ExperienceEntry[] = [
   {
     index: "01",
     company: "BASK Health",
-    period: "DEC 2025 – PRESENT",
-    role: "Software Engineer (Mid Level)",
+    period: "DEC 2025 - PRESENT",
+    role: "Software Engineer",
     context: "HEALTHCARE · STARTUP",
     description:
       "Engineered end-to-end type-safe front-end features for core administration tools using Next.js and tRPC, accelerating continuous release cycles in a fast-paced startup environment. Designed and deployed intuitive interfaces for the Customer Success and Admin portals with high autonomy.",
@@ -32,8 +33,8 @@ const experiences: ExperienceEntry[] = [
   {
     index: "02",
     company: "FullStack Labs",
-    role: "Software Engineer (Mid Level)",
-    period: "DEC 2024 – PRESENT",
+    role: "Software Engineer",
+    period: "DEC 2024 - DEC 2025",
     context: "SOFTWARE CONSULTANCY",
     description:
       "Engineered accessible, themeable React components using Styled Components for FloQast; contributed to the modernization of design systems across dozens of repositories. Partnered with a cross-functional team to deliver high-quality web experiences for MGM Resorts.",
@@ -49,8 +50,8 @@ const experiences: ExperienceEntry[] = [
   {
     index: "03",
     company: "senhasegura",
-    period: "FEB 2022 – DEC 2024",
-    role: "React Developer (Pleno/Mid-Level)",
+    period: "FEB 2022 - DEC 2024",
+    role: "React Developer",
     context: "IDENTITY & ACCESS MANAGEMENT",
     description:
       "Drove the front-end development of a cloud identity management platform using React and TypeScript. Directed the full-scale migration of a primary application from JavaScript to TypeScript, refactoring 150+ files to boost developer velocity.",
@@ -62,7 +63,7 @@ const experiences: ExperienceEntry[] = [
   {
     index: "04",
     company: "senhasegura",
-    period: "JUN 2021 – FEB 2022",
+    period: "JUN 2021 - FEB 2022",
     role: "PHP Back-End Intern",
     context: "BACKEND · INTERNSHIP",
     description:
@@ -79,7 +80,7 @@ export function ExperienceSection() {
     <section id="experience" className="py-24 border-b border-ghost-100">
       <div className="max-w-screen-2xl mx-auto w-full px-8 md:px-12">
         <p className="text-xs tracking-[0.3em] uppercase text-gold mb-20">
-          // Manifesto 02. Experience
+          {"// Manifesto 02. Experience"}
         </p>
 
         <div className="flex flex-col gap-24">
@@ -95,10 +96,11 @@ export function ExperienceSection() {
                 </span>
                 {exp.logo ? (
                   <div className="flex items-center justify-start">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
+                    <Image
                       src={exp.logo}
                       alt={exp.logoAlt ?? exp.company}
+                      width={240}
+                      height={96}
                       className={`${exp.logoHeight ?? "h-8"} w-auto object-contain object-left`}
                       style={{ filter: "brightness(0) invert(1)" }}
                     />
@@ -151,14 +153,15 @@ export function ExperienceSection() {
                       {exp.clientLogos.map((src) => {
                         const isMGM = src.toLowerCase().includes("mgm");
                         return (
-                          // eslint-disable-next-line @next/next/no-img-element
-                          <img
+                          <Image
                             key={src}
                             src={src}
                             alt="Client Logo"
+                            width={isMGM ? 360 : 240}
+                            height={isMGM ? 224 : 96}
                             className={`${
                               isMGM ? "h-28 scale-150 origin-left" : "h-12"
-                            } w-auto object-contain brightness-0 invert opacity-50 hover:opacity-100 transition-all duration-300`}
+                            } w-auto object-contain brightness-0 invert opacity-70 hover:opacity-100 transition-all duration-300`}
                           />
                         );
                       })}

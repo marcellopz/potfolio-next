@@ -73,8 +73,8 @@ function FreelanceGraphic() {
     <div className="relative aspect-video bg-ghost-100 border border-ghost-200 flex items-center justify-center overflow-hidden">
       {/* Geometric decoration - mirrors About section style */}
       <div className="absolute w-[85%] h-[120%] border border-gold/10 rotate-18" />
-      <div className="absolute w-[70%] h-[100%] border border-gold/15 rotate-[-7deg]" />
-      <div className="absolute w-[40%] h-[70%] border border-gold/20 rotate-[10deg]" />
+      <div className="absolute w-[70%] h-full border border-gold/15 rotate-[-7deg]" />
+      <div className="absolute w-[40%] h-[70%] border border-gold/20 rotate-10" />
 
       {/* Center content */}
       <div className="relative z-10 flex flex-col items-center gap-3 select-none">
@@ -93,7 +93,7 @@ function FreelanceGraphic() {
         Freelance
       </span>
       <span className="absolute bottom-4 right-5 text-[8px] tracking-[0.3em] uppercase text-muted/40">
-        2023 – 2025
+        2023 - present
       </span>
     </div>
   );
@@ -229,7 +229,7 @@ export function ProjectsSection() {
         <div className="mb-24 flex flex-col md:flex-row md:items-end justify-between gap-8">
           <div>
             <p className="text-xs tracking-[0.3em] uppercase text-gold mb-4">
-              // Manifesto 03. Selected Works
+              {"// Manifesto 03. Selected Works"}
             </p>
             <h2 className="font-serif text-foreground text-[clamp(2.5rem,6vw,5rem)] leading-none tracking-tight">
               Selected Works
